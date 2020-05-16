@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a3d77c7c-3ee4-44b0-bef1-98109c3234c3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,7 +163,7 @@
       <workItem from="1589402037702" duration="3780000" />
       <workItem from="1589427043988" duration="10498000" />
       <workItem from="1589481273360" duration="9894000" />
-      <workItem from="1589577806408" duration="2978000" />
+      <workItem from="1589577806408" duration="4718000" />
     </task>
     <servers />
   </component>
@@ -182,5 +180,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myShow1" value="true" />
   </component>
 </project>
