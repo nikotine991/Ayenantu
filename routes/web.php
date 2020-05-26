@@ -3,12 +3,16 @@
 
 
 Route::view('/','home')->name('home');
-Route::view('/about','about')->name('about');
-Route::get('/portfolio','PortfolioController@index')->name('portfolio.index');
-Route::get('/portfolio/{$id}', 'PortfolioController@show')->name('portfolio.show');
-Route::view('/contact','contact')->name('contact');
 
-Route::post('contact', 'MessagesController@store');
+Route::view('/about','about')->name('about');
+
+Route::get('/portfolio','ProjectController@index')->name('projects.index');
+Route::get('/portfolio/create', 'ProjectController@create')->name('projects.create');
+Route::post('/portfolio','ProjectController@store')->name('projects.store');
+Route::get('/portfolio/{project}', 'ProjectController@show')->name('projects.show');
+
+Route::view('/contact','contact')->name('contact');
+Route::post('contact', 'MessageController@store')->name('messages.store');
 
 //Route::get('contactame', function () {
 //    return view('contact');

@@ -5,17 +5,19 @@
 @section('content')
     <h1>@lang('Portfolio')</h1>
 
+    <a href="{{ route('projects.create') }}">Crear proyecto</a>
+
     <ul>
 
             @forelse($projects as $project)
-                <li><a href="{{route('portfolio.show', $project)}}">title}}</a></li>
+                <li><a href="{{ route('projects.show', $project) }}">{{ $project->title }}</a></li>
 
             @empty
                 <li>No hay proyectos para mostrar</li>
-            @endforelse
+            @endforelse 
             {{ $projects->links() }}
 
     </ul>
-
+ 
 
 @endsection
