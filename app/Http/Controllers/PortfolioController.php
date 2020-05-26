@@ -16,7 +16,7 @@ class PortfolioController extends Controller
     public function index()
     {
 
-        return view('portfolio', [
+        return view('projects.index', [
             
             'projects' => Project::latest()->paginate()
         ]);
@@ -26,7 +26,7 @@ class PortfolioController extends Controller
     {  
         return view('projects.show', [
            
-            'project' => Project::find($id)
+            'project' => Project::findOrfail($id)
         ]);
 
         
