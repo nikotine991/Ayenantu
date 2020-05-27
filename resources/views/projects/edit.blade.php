@@ -8,11 +8,10 @@
     @include('partials.validation-errors')
 
     <form method="POST" action="{{ route('projects.update', $project) }}">
-        @csrf @method('PATCH')
+        @method('PATCH')
         
-        @include('projects._form')
+        @include('projects._form', ['btnText' => 'Editar'])
 
-        <button>Editar</button>
     </form>
  
 @endsection

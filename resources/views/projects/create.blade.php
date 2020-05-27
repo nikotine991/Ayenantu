@@ -8,11 +8,9 @@
     @include('partials.validation-errors')
 
     <form method="POST" action="{{ route('projects.store')}}">
-        @csrf
         
-        @include('projects._form')
+        @include('projects._form', ['btnText' => 'Guardar'])
 
-        <button>Guardar</button>
     </form>
 
 @endsection
