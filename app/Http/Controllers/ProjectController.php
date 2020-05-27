@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Project;
 use Illuminate\Http\Request;
 use voku\helper\ASCII;
+use App\Http\Requests\SaveProjectRequest;
 
 class ProjectController extends Controller
 {
@@ -37,19 +38,11 @@ class ProjectController extends Controller
         return view('projects.create');
     }
 
-    public function store()
+    public function store(SaveProjectRequest $request)
     {
         
-        $fields = request()->validate([
-            'title' => 'required',
-            'url' => 'required',
-            'description' => 'required'
-        ]);
-        
+        Project::create($request->validated() );
 
-        Project::create($fields);
-
-        
         return redirect()->route('projects.index');
         
     }
@@ -61,13 +54,9 @@ class ProjectController extends Controller
         ]);
     }
 
-    public function update(Project $project)
+    public function update(Project $project, SaveProjectRequest $request)
     {
-        $project->update([
-           'title' => request('title'),
-           'url' => request('url'),
-           'description' => request('description') 
-        ]);
+        $project->update($request->validated());
 
         return redirect()->route('projects.show', $project);
     }
