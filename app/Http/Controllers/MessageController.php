@@ -18,9 +18,9 @@ class MessageController extends Controller
             'name.required' => __('I need your name')
         ]);
 
-        Mail::to('ayeanantu@gmail.com')->queue(new MessageReceived($message));
+        Mail::to('ayenantu@gmail.com')->queue(new MessageReceived($message));
         // return new MessageReceived($message);
          
-        return 'Mensaje enviado';
+        return back()->with('status', 'Recibimos tu mensaje, te responderemos en menos de 23 horas');
    }
 }
