@@ -10,6 +10,12 @@ Route::resource('portfolio', 'ProjectController')->names('projects')->parameters
 
 // Route::resource('projects', 'ProjectController');
 
+Route::view('/contact','contact')->name('contact');
+Route::post('contact', 'MessageController@store')->name('messages.store');
+
+
+Auth::routes(['register' => false]);
+
 // Route::get('/portfolio','ProjectController@index')->name('projects.index');
 // Route::get('/portfolio/create', 'ProjectController@create')->name('projects.create');
 
@@ -21,14 +27,5 @@ Route::resource('portfolio', 'ProjectController')->names('projects')->parameters
 
 // Route::delete('/portfolio/{project}','ProjectController@destroy')->name('projects.destroy');
 
-Route::view('/contact','contact')->name('contact');
-Route::post('contact', 'MessageController@store')->name('messages.store');
 
-//Route::get('contactame', function () {
-//    return view('contact');
-//})->name('contactos');
-//
-//Route::get('/', function(){
-//    return view('home');
-//})->name('home');
 
